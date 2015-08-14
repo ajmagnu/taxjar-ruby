@@ -77,8 +77,7 @@ module Taxjar
     end
 
     def values_as_floats_where_possible(attrs)
-      result = attrs.map{|k, v| [k, to_f_or_i_or_s(v)]}
-      return Hash[result.attrs]
+      Hash[attrs.map{|k, v| [k, to_f_or_i_or_s(v)]}]
     end
 
     def to_f_or_i_or_s(v)
