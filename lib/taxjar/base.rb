@@ -50,7 +50,7 @@ module Taxjar
     end
 
     def initialize(attrs = {})
-      attrs = values_as_floats_where_possible(attrs)
+      attrs = Hash[values_as_floats_where_possible(attrs)]
       @attrs = attrs || {}
     end
 
